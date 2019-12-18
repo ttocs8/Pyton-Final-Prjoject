@@ -265,16 +265,16 @@ textRect_NotEnoughCoins.center = (700, 200)
 ########################
 
 ###########All Inital/Main/Deafult images and corresponding rects
-TwoPP_Image = pygame.image.load('images/twopppack.png').convert_alpha()
+TwoPP_Image = pygame.image.load('Images/twopppack.png').convert_alpha()
 TwoPP_Rect= TwoPP_Image.get_rect()
 TwoPP_Rect.center = (365,300)
-FourPP_Image = pygame.image.load('images/fourppack.png').convert_alpha()
+FourPP_Image = pygame.image.load('Images/fourppack.png').convert_alpha()
 FourPP_Rect= FourPP_Image.get_rect()
 FourPP_Rect.center = (665,300)
-SevenPP_Image = pygame.image.load('D:\Python Programming\CS2021_Scott_Hunt_Final_Project\Images\sevenppack.png').convert_alpha()
+SevenPP_Image = pygame.image.load('Images\sevenppack.png').convert_alpha()
 SevenPP_Rect= SevenPP_Image.get_rect()
 SevenPP_Rect.center = (965,300)
-transparent = pygame.image.load('D:\Python Programming\CS2021_Scott_Hunt_Final_Project\Images\def.png').convert_alpha()
+transparent = pygame.image.load('Images\def.png').convert_alpha()
 ###########
 
 ###Used for storing/manipulating data in the main loop
@@ -303,7 +303,7 @@ def AddToClub():
         r = Pack_Card_Recs[i]
         if r.collidepoint(x,y):
             club.clubPlayers += [Opened_Pack[i]] #clubPlayers is a list of Card objects
-            club.clubPlayerPaths += ['images/Players/' + card_rep(Opened_Pack[i]) + '.png'] 
+            club.clubPlayerPaths += ['Images/Players/' + card_rep(Opened_Pack[i]) + '.png'] 
 
 #This is used in the main game loop to check for clicks on a card object, and if that Card is already in MyClubPlayers, then quick sell them
 def QuickSell():
@@ -331,9 +331,9 @@ while run:
             if textRect_Back.collidepoint(x,y):
                 print("Clicked Back")
                 Opened_Pack, Pack_Card_Recs = [], []
-                TwoPP_Image = pygame.image.load('images/twopppack.png').convert_alpha()
-                FourPP_Image = pygame.image.load('images/fourppack.png').convert_alpha()
-                SevenPP_Image = pygame.image.load('D:\Python Programming\CS2021_Scott_Hunt_Final_Project\Images\sevenppack.png').convert_alpha()
+                TwoPP_Image = pygame.image.load('Images/twopppack.png').convert_alpha()
+                FourPP_Image = pygame.image.load('Images/fourppack.png').convert_alpha()
+                SevenPP_Image = pygame.image.load('Images\sevenppack.png').convert_alpha()
                 textRect_Back.center = (465, 500)
                 textRect_MyClub.center = (1600 // 2, 1000 // 2)
                 textRect_TwoPP.center = (740 // 2, 300 // 2)
